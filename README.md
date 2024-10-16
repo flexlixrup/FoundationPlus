@@ -1,8 +1,8 @@
 # FoundationPlus
 
-[![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)](https://swift.org)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fflexlixrup%2FFoundationPlus%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/flexlixrup/FoundationPlus)
 [![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fflexlixrup%2FFoundationPlus%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/flexlixrup/FoundationPlus)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Overview
 
