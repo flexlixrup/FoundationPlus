@@ -2,6 +2,7 @@
 
 [![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)](https://swift.org)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fflexlixrup%2FFoundationPlus%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/flexlixrup/FoundationPlus)
 
 ## Overview
 
@@ -42,7 +43,7 @@ Then, include `FoundationPlus` as a dependency in your target:
 
 ## Usage
 
-The full documentation is provided via Docc on [Swift Package Manager](https://swiftpackageindex.com)
+The full documentation is provided via DocC on [Swift Package Manager](https://swiftpackageindex.com/flexlixrup/FoundationPlus).
 
 ## Contributing
 
