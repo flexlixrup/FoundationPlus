@@ -9,7 +9,8 @@
 This package extends the Swift Foundation framework with extensions to existing types and (in future) entirely new types.
 
 ## Requirements
-	- Swift 6.0
+
+Swift 6.0+
 
 ## Installation
 
