@@ -44,4 +44,12 @@ struct StringTests {
 		let result = values.0.dateFormat
 		#expect(result == values.1)
 	}
+	
+	@Test("Test the subscript for strings")
+	func testSubscript() {
+		let string: String = "Hello World"
+		#expect(string[0] == "H")
+		#expect(string[10] == "d")
+		#expect(string[11] == nil)
+	}
 }
