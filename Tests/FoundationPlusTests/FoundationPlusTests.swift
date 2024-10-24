@@ -3,13 +3,12 @@ import Testing
 
 @Suite("Array Test Suite")
 struct ArrayTests {
-	
 	@Test("Test to get the second to last element")
 	func getSecondToLastElementNotNil() {
 		let array: [Int] = [1, 2, 3, 4, 5]
 		#expect(array.secondToLast == 4)
 	}
-	
+
 	@Test("Test to get the second to last element when the array has < 2 elements")
 	func getSecondToLastElementNil() {
 		let array: [Int] = [1]
@@ -19,11 +18,13 @@ struct ArrayTests {
 
 @Suite("CaseIterable Test Suite")
 struct CaseIterableTests {
-	
 	@Test("Test to get the index of an element")
 	func getIndexOfElement() {
 		enum Direction: CaseIterable, Equatable {
-			case north, south, east, west
+			case north
+			case south
+			case east
+			case west
 		}
 		let direction: Direction = .east
 		#expect(direction.index == 2)
@@ -32,7 +33,6 @@ struct CaseIterableTests {
 
 @Suite("String test suite")
 struct StringTests {
-	
 	@Test("Test the detection of Date Formats", arguments: [
 		("12.12.2023", "dd.MM.yyyy"),
 		("12.12.23", "dd.MM.yy"),
@@ -44,7 +44,10 @@ struct StringTests {
 		let result = values.0.dateFormat
 		#expect(result == values.1)
 	}
-	
+}
+
+@Suite("StringProtocolTestSuite")
+struct StringProtocolTests {
 	@Test("Test the subscript for strings")
 	func testSubscript() {
 		let string: String = "Hello World"

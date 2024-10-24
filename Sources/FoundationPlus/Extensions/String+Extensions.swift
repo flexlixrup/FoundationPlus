@@ -48,11 +48,3 @@ public extension String {
 	}
 }
 
-
-public extension String {
-	@inlinable subscript (index: Int) -> Character? {
-		guard index >= 0, index < count else { return nil }
-		let chars: [Character] = Array(self)
-		return chars[index]
-	}
-}
