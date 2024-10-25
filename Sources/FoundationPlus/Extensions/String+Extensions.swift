@@ -48,3 +48,33 @@ public extension String {
 	}
 }
 
+public extension String {
+	/// Calculate the levenshtein distance `self` and another String.
+	/// - Parameter s2: The other string to compare `self` to.
+	/// - Returns: The levenshtein distance.
+	@inlinable
+	func levenshteinDistance(to s2: String) -> Int {
+		let s1: [UnicodeScalar] = Array(unicodeScalars)
+		let s2: [UnicodeScalar] = Array(s2.unicodeScalars)
+		
+		guard !s1.isEmpty else { return s2.count }
+		guard !s2.isEmpty else { return s1.count }
+		
+		var previousRow = Array(0...s2.count)
+		
+		for i in 1...s1.count {
+			var currentRow = [i] + Array(repeating: 0, count: s2.count)
+			
+			for j in 1...s2.count {
+				let insertion = currentRow[j - 1] + 1
+				let deletion = previousRow[j] + 1
+				let substitution = previousRow[j - 1] + (s1[i - 1] == s2[j - 1] ? 0 : 1)
+				currentRow[j] = Swift.min(insertion, deletion, substitution)
+			}
+			
+			previousRow = currentRow
+		}
+		return previousRow[s2.count]
+	}
+
+}

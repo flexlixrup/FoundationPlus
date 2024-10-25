@@ -44,6 +44,19 @@ struct StringTests {
 		let result = values.0.dateFormat
 		#expect(result == values.1)
 	}
+
+	@Test("Test the calculation of Levenshtein Distance", arguments: [
+		(("kitten", "sitting"), 3),
+		(("flaw", "lawn"), 2),
+		(("intention", "execution"), 5),
+		(("book", "back"), 2),
+		(("example", "samples"), 3),
+		(("", ""), 0)
+	])
+	func testLevenshteinDistance(values: ((String, String), Int)) {
+		let result = values.0.0.levenshteinDistance(to: values.0.1)
+		#expect(result == values.1)
+	}
 }
 
 @Suite("StringProtocolTestSuite")
