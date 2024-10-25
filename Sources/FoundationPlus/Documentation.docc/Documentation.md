@@ -12,6 +12,11 @@ This package extends the Swift Foundation framework with extensions to existing 
 ### String
 
 - ``Swift/String/dateFormat``
+- ``Swift/String/levenshteinDistance(to:)``
+
+### StringProtocol
+
+- ``Swift/StringProtocol/subscript(index:)``
 
 ### CaseIterable
 
