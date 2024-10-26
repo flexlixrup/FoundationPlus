@@ -1,4 +1,4 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.8
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -22,3 +22,14 @@ let package = Package(
         ),
     ]
 )
+
+let swiftSettings: [SwiftSetting] = [
+	.enableUpcomingFeature("BareSlashRegexLiterals"),
+	.enableUpcomingFeature("StrictConcurrency")
+]
+
+for target in package.targets {
+	target.swiftSettings = target.swiftSettings ?? []
+	target.swiftSettings?.append(contentsOf: swiftSettings)
+}
+

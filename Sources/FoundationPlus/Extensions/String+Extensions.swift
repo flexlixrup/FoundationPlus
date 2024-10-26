@@ -43,13 +43,13 @@ public extension String {
 			if contains(regex.0) {
 				return regex.1
 			}
-		}
+		}	
 		return "dd.MM.yyyy"
 	}
 }
 
 public extension String {
-	/// Calculate the levenshtein distance `self` and another String.
+	/// Calculate the levenshtein distance between `self` and another String.
 	/// - Parameter s2: The other string to compare `self` to.
 	/// - Returns: The levenshtein distance.
 	@inlinable
